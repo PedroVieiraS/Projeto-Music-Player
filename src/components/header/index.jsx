@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass, Student } from "phosphor-react";
 import {Gear} from "phosphor-react";
 import { Bell } from "phosphor-react";
 import { List } from "phosphor-react";
@@ -23,16 +23,9 @@ export function Header() {
       <div className={styles["right-container"]}>
         <button className={styles.premiumButton}>Explore Premium</button>
         <div className={styles.iconsGroup}>
-          <div className={styles.iconWrapper}>
             <Gear size={30} className={styles.iconGear} />
-          </div>
-          <div className={styles.iconWrapper}>
-            <Bell size={30} />
-          </div>
-
-          <div className={styles.iconWrapper}>
-            <List size={30} />
-          </div>
+            <Bell size={30} className={styles.iconBell} />
+            <List size={30} className={styles.iconList} />
         </div>
       </div>
     </header>
