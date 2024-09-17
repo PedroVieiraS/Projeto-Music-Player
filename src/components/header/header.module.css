@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.left-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.iconImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; 
+    border-radius: 10px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.icon {
+    position: absolute;
+    left: 30%;
+    color: #aaa; 
+}
+
+.input {
+    margin-left: 20px;
+    padding-left: 35px;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ff9cff;
+}
+
+.right-container {
+    display: flex;
+    align-items: center;
+}
+
+.premiumButton {
+    margin-right: 100px;
+    color: #404040;
+    height: 40px;
+    width: 190px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ff9cff;
+    
+}
+
+.iconsGroup {
+    display: flex;
+    align-items: center;
+
+
+    color: #404040;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ff9cff;
+    padding: 20px;
+}
+
+.iconWrapper {
+    margin-right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
