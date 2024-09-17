@@ -6,12 +6,12 @@ import {Home} from "../pages/Home"
 import {Favorites} from "../pages/Favorites"
 import {NotFound} from "../pages/NotFound"
 
-export default function Routers() {
+export function Routers() {
   return (
     <Routes>
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/favorites/:owner/:repo" element={<Favorites />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

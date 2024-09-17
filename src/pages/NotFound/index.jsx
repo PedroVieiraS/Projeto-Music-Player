@@ -1,7 +1,7 @@
 
 
-export default function NotFound() {
+export function NotFound() {
   return (
-    <div>index</div>
+    <div></div>
   )
 }
