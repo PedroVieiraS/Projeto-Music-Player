@@ -23,12 +23,12 @@
     align-items: center;
     border-radius: 20px;
     padding: 10px;
-    width: 100%;
+    width: 300px;
 }
 
 .icon {
     position: absolute;
-    left: 30%;
+    left: 28%;
     color: #aaa; 
 }
 
@@ -40,6 +40,11 @@
     font-size: 16px;
     border-radius: 20px;
     border: 1px solid #ff9cff;
+    transition: background-color 0.6s ease-in;
+}
+.input:hover {
+background: linear-gradient(90deg, #ff9cff, #ffffff);
+
 }
 
 .right-container {
@@ -48,14 +53,22 @@
 }
 
 .premiumButton {
-    margin-right: 100px;
+    margin-right: 60px;
     color: #404040;
     height: 40px;
     width: 190px;
     font-size: 16px;
     border-radius: 20px;
     border: 1px solid #ff9cff;
-    
+
+    cursor: pointer;
+    transition: background-color 5s ease;
+}
+
+.premiumButton:hover {
+
+background: linear-gradient(90deg, #ff9cff, #ffffff);
+
 }
 
 .iconsGroup {
@@ -83,4 +96,43 @@
     border-radius: 50%;
     margin-right: 20px;
     object-fit: cover;
+}
+
+@media (max-width: 467px ) {
+    /* Styles for larger screens */
+   .searchBar {
+    width: 300px
+   }
+   .premiumButton {
+    
+    width: 150px;
+   }
+}
+@media (max-width: 867px) {
+
+    /* Styles for larger screens */
+   .searchBar {
+    width: 300px
+   }
+   .icon {
+    left: 28%;
+   }
+   .premiumButton {
+    
+    width: 200px;
+    margin-right: 10px;
+   }
+}
+@media (max-width: 375px ) {
+    /* Styles for larger screens */
+   .searchBar {
+    width: 250px
+   }
+   .premiumButton {
+    
+    width: 120px;
+   }
+   .iconsGroup {
+    padding: 10px;
+   }
 }
