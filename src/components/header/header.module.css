@@ -1,0 +1,158 @@
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.left-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.iconImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; 
+    border-radius: 10px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+}
+
+
+.icon {
+    position: absolute;
+    left: 28%;
+    color: #aaa; 
+}
+
+.input {
+    margin-left: 20px;
+    padding-left: 35px;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ff9cff;
+    transition: background-color 0.6s ease-in,transform 0.4s ease;
+}
+.input:hover {
+    background: linear-gradient(90deg, #ff9cff, #ffffff);
+    transform: translateY(-3px);
+}
+
+.right-container {
+    display: flex;
+    align-items: center;
+}
+
+.premiumButton {
+    margin-right: 60px;
+    color: #404040;
+    height: 40px;
+    width: 190px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ff9cff;
+
+    cursor: pointer;
+    transition: background-color 5s ease, transform 0.4s ease;
+}
+
+.premiumButton:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #ff9cff, #ffffff);
+
+}
+
+.iconsGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    color: #404040;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ff9cff;
+    padding: 20px;
+}
+
+.iconGear {
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.iconGear:hover {
+    transform: translateY(-3px);
+}
+.iconBell {
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.iconBell:hover {
+    transform: translateY(-3px);
+}
+.iconList {
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.iconList:hover {
+    transform: translateY(-3px);
+}
+
+.profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 467px ) {
+    /* Styles for larger screens */
+   .searchBar {
+    width: 300px
+   }
+   .premiumButton {
+    
+    width: 150px;
+   }
+}
+@media (max-width: 867px) {
+
+    /* Styles for larger screens */
+   .searchBar {
+    width: 300px
+   }
+   .icon {
+    left: 28%;
+   }
+   .premiumButton {
+    
+    width: 200px;
+    margin-right: 10px;
+   }
+}
+@media (max-width: 375px ) {
+    /* Styles for larger screens */
+   .searchBar {
+    width: 250px
+   }
+   .premiumButton {
+    
+    width: 120px;
+   }
+   .iconsGroup {
+    padding: 10px;
+   }
+}

@@ -1,5 +1,8 @@
+import { Header } from "../../components/header"
 export function Home() {
   return (
-    <div>index</div>
+    <div>
+      <Header />
+    </div>
   )
 }
