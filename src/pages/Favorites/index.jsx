@@ -1,6 +1,5 @@
-
 export function Favorites() {
   return (
-    <div>ola</div>
+    <div>index</div>
   )
 }
