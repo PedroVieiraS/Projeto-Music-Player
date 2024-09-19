@@ -1,5 +1,5 @@
-import { MagnifyingGlass } from "phosphor-react";
-import { Gear } from "phosphor-react";
+import { MagnifyingGlass, Student } from "phosphor-react";
+import { Gear, Star } from "phosphor-react";
 import { Bell } from "phosphor-react";
 import { List } from "phosphor-react";
 import img from "./img/music.png";
@@ -93,22 +93,24 @@ export function Header() {
               <ul className={styles.album}>
                 {datas.map((data, index) => (
                   <li key={index} style={{ "margin-top": "20px" }}>
-                    
-                      <img
-                        className={styles.FotoAlbum}
-                        src={data.album.images[0].url}
-                        alt=""
-                      />
-                  
-
+                    <img
+                      className={styles.img1}
+                      src={data.album.images[0].url}
+                      alt={data.album.name}
+                    />
                     <section className={styles.content}>
                       <div className={styles.textContent}>
                         <h1>{data.name}</h1>
                         <p>{data.artists[0].name}</p>
-                        <audio controls>
-                          <source src={data.preview_url} type="audio/mpeg" />
-                          Your browser does not support the audio element.
-                        </audio>
+                        <div className={styles.favorite}>
+                          <audio controls>
+                            <source src={data.preview_url} type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                          </audio>
+                          <button>
+                            <Star size={32} color="#c8cb1a" weight="fill" />
+                          </button>
+                        </div>
                       </div>
                     </section>
                   </li>
