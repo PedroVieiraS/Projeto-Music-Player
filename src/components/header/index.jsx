@@ -11,7 +11,7 @@ export function Header() {
   const [datas, setdatas] = useState([]);
 
   const token =
-    "BQAw859FFmXQzShrPqzYO0N-Ofgy058eXGc3cYe-6CQkbyypiageERPFIYkYs_yBInRXEavXxcueVKVuSGw86brAgldQA37I_HxdNKK7ovrqdjKvBdo";
+    "BQAq_fqfJZk29Bd-4mUEVfEWzeh_wq4hPdtiWnohKEGNbUCznV-RXv0iMzZ-YWsuxAa-BPVRjafOriqXWYeSjLLWifsPw0k5ft7GR6_9SzUov4izXk4";
 
   function handleChangeSearchValue(e) {
     setdado(e.target.value);
@@ -26,7 +26,7 @@ export function Header() {
   async function handleSubmit() {
     // e.preventDefault();
 
-    const { data } = await api.get(`/v1/search?q=${dado}&type=album`, {
+    const { data } = await api.get(`/v1/search?q=${dado}&type=track`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -35,7 +35,7 @@ export function Header() {
     console.log(data);
     console.log(data.albums);
 
-    const dito = data.albums.items.map((item) => item);
+    const dito = data.tracks.items.map((item) => item);
 
     setdatas(dito);
   }
@@ -93,17 +93,24 @@ export function Header() {
               <ul className={styles.album}>
                 {datas.map((data, index) => (
                   <li key={index} style={{ "margin-top": "20px" }}>
-                    <img
-                      className={styles.FotoAlbum}
-                      src={data.images[0].url}
-                      alt=""
-                      // style={{ width: "100px" }}
-                    />
-                    <div className={styles.textContent}>
-                      <p>{data.name}</p>
-                      <p>{data.album_type}</p>
-                      <span className={styles.track}>Tracks:{data.total_tracks}</span>
-                    </div>
+                    
+                      <img
+                        className={styles.FotoAlbum}
+                        src={data.album.images[0].url}
+                        alt=""
+                      />
+                  
+
+                    <section className={styles.content}>
+                      <div className={styles.textContent}>
+                        <h1>{data.name}</h1>
+                        <p>{data.artists[0].name}</p>
+                        <audio controls>
+                          <source src={data.preview_url} type="audio/mpeg" />
+                          Your browser does not support the audio element.
+                        </audio>
+                      </div>
+                    </section>
                   </li>
                 ))}
               </ul>
