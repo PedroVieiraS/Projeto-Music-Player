@@ -5,8 +5,9 @@ export function PegarMusica() {
 
   const [dado, setdado] = useState('')
   const [datas, setdatas] = useState([])
-  const [loading, setLoading] = useState(false)
-  const token = "BQBSxEbuLusNed1Bd8YBeFXYZtxAP_zLArab9l0neRmxAT86mZyQcUgcfVICGnARFRJ7xuzCkPeVt66q6d2Jdb2D2FNZ3M5DjgrrW-mqy10JxM_IEek";
+  // const [loading, setLoading] = useState(false)
+  const token =
+    "BQAw859FFmXQzShrPqzYO0N-Ofgy058eXGc3cYe-6CQkbyypiageERPFIYkYs_yBInRXEavXxcueVKVuSGw86brAgldQA37I_HxdNKK7ovrqdjKvBdo";
 
   function handleChangeSearchValue(e){
     setdado(e.target.value);
@@ -15,7 +16,7 @@ export function PegarMusica() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    setLoading(true)
+    // setLoading(true)
     const {data}  = await api.get(
       `/v1/search?q=${dado}&type=album`, {
         headers: {
@@ -35,7 +36,7 @@ export function PegarMusica() {
     const dito = data.albums.items.map((item) => item)
 
     setdatas(dito)
-    setLoading(false)
+    // setLoading(false)
 
   }
 
