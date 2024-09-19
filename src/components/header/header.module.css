@@ -1,3 +1,4 @@
+/* /* Estilos do cabeçalho */
 .header {
   display: flex;
   justify-content: space-between;
@@ -5,12 +6,14 @@
   padding: 10px 20px;
 }
 
+/* Estilos do contêiner à esquerda do cabeçalho */
 .left-container {
   position: relative;
   display: flex;
   align-items: center;
 }
 
+/* Estilo da imagem do ícone de música */
 .iconImage {
   width: 50px;
   height: 50px;
@@ -18,6 +21,7 @@
   border-radius: 10px;
 }
 
+/* Estilos da barra de busca */
 .searchBar {
   display: flex;
   align-items: center;
@@ -26,12 +30,14 @@
   width: 300px;
 }
 
+/* Estilo do ícone da barra de busca */
 .icon {
   position: absolute;
   left: 28%;
   color: #aaa;
 }
 
+/* Estilo do campo de entrada da busca */
 .input {
   margin-left: 20px;
   padding-left: 35px;
@@ -42,16 +48,20 @@
   border: 1px solid #ff9cff;
   transition: background-color 0.6s ease-in, transform 0.4s ease;
 }
+
+/* Efeito hover no campo de entrada */
 .input:hover {
   background: linear-gradient(90deg, #ff9cff, #ffffff);
   transform: translateY(-3px);
 }
 
+/* Estilos do contêiner à direita do cabeçalho */
 .right-container {
   display: flex;
   align-items: center;
 }
 
+/* Estilo do botão premium */
 .premiumButton {
   margin-right: 60px;
   color: #404040;
@@ -60,21 +70,22 @@
   font-size: 16px;
   border-radius: 20px;
   border: 1px solid #ff9cff;
-
   cursor: pointer;
   transition: background-color 5s ease, transform 0.4s ease;
 }
 
+/* Efeito hover no botão premium */
 .premiumButton:hover {
   transform: translateY(-3px);
   background: linear-gradient(90deg, #ff9cff, #ffffff);
 }
 
+/* Estilos do grupo de ícones */
 .iconsGroup {
   display: flex;
   align-items: center;
   justify-content: center;
-background-color: #f9f9f9 ;
+  background-color: #f9f9f9;
   color: #404040;
   height: 40px;
   font-size: 16px;
@@ -83,40 +94,154 @@ background-color: #f9f9f9 ;
   padding: 20px;
 }
 
+/* Estilo do ícone de configurações */
 .iconGear {
   margin-right: 20px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
+/* Efeito hover no ícone de configurações */
 .iconGear:hover {
   transform: translateY(-3px);
 }
+
+/* Estilo do ícone de notificações */
 .iconBell {
   margin-right: 20px;
   cursor: pointer;
   transition: transform 0.4s ease;
 }
+
+/* Efeito hover no ícone de notificações */
 .iconBell:hover {
   transform: translateY(-3px);
 }
+
+/* Estilo do ícone de lista */
 .iconList {
   cursor: pointer;
   transition: transform 0.4s ease;
 }
+
+/* Efeito hover no ícone de lista */
 .iconList:hover {
   transform: translateY(-3px);
 }
 
-.profilePic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 20px;
-  object-fit: cover;
+/* Estilo da seção de músicas */
+.musics {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
+/* Estilo do conteúdo da música */
+.content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 30vh;
+}
+
+/* Estilo do elemento de áudio */
+.content audio {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Estilos da lista de álbuns */
+.album {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* Estilo de cada item da lista de álbuns */
+.album li {
+  width: 32%;
+  background-color: #f1f3f4;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  max-height: 200px;
+  transition: transform 0.4s ease;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Efeito hover no item do álbum */
+.album li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da imagem do álbum */
+.album img {
+  width: 30%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Efeito hover na imagem do álbum */
+.album img:hover { 
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* Estilo do conteúdo do texto */
+.textContent {
+  width: 100%;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Estilo do parágrafo no conteúdo */
+.textContent p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #404040;
+}
+
+/* Estilo do botão de favoritos */
+.favorite {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Estilo do ícone de favorito */
+.favorite svg {
+  color: #ff9cff;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.4s ease;
+}
+.favorite svg:hover {
+  transform: scale(1.5);
+}
+
+/* Media queries para responsividade */
 @media (max-width: 467px) {
-  /* Styles for larger screens */
   .searchBar {
     width: 300px;
   }
@@ -125,7 +250,6 @@ background-color: #f9f9f9 ;
   }
 }
 @media (max-width: 867px) {
-  /* Styles for larger screens */
   .searchBar {
     width: 300px;
   }
@@ -147,86 +271,4 @@ background-color: #f9f9f9 ;
   .iconsGroup {
     padding: 10px;
   }
-}
-.musics {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-
-}
-.content {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  height: 30vh;
-}
-.content audio {
-    display: flex;
-  align-items: center;
-
-
-  border-radius: 10px;
-  padding: 10px;
-  
-}
-.album {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-}
-.album li {
-    width: 32%;
-    background-color: #f1f3f4;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 16px;
-    max-height: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    gap: 20px; 
-    align-items: center; 
-    transition: transform 0.4s ease;
-}
-
-.album li:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.album img {
-    width: 30%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-.textContent {
-    width: 100%;
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center; 
-    flex-grow: 1; 
-}
-.textContent p {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.5;
-    color:#404040;
-}
-.track {
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #b8b8b8;
-}
-.type {
-  font-size: 6px;
-  color: #b8b8b8;
 }
