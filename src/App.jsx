@@ -1,7 +1,5 @@
-import { Routers } from "./routes"
+import { Routers } from "./routes";
 
 export function App() {
-  return (
-    <Routers/>
-  )
+  return <Routers />;
 }
