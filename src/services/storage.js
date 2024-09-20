@@ -10,24 +10,24 @@ export const STORAGE_SERVICE = {
     return []
 },
 
-createContact: (contact) => {
+createContact: (data) => {
     const storage = localStorage.getItem(DB_KEY);
 
-    const newContact = {
-        name: contact.name,
-        email: contact.email,
-        phone: contact.phone
+    const songFavorite = {
+        name: data.name,
+        artista: data.artists[0].name,
+        audio: data.preview_url, 
     };
 
     if (storage) {
         const storageParsed = JSON.parse(storage);
 
-        const contacts = [...storageParsed, newContact];
+        const contacts = [...storageParsed, songFavorite];
 
         return localStorage.setItem(DB_KEY, JSON.stringify(contacts));
     }
 
-    return localStorage.setItem(DB_KEY, JSON.stringify([newContact]));
+    return localStorage.setItem(DB_KEY, JSON.stringify([songFavorite]));
 },
 deleteContact: (contactName) => {
     const storage = localStorage.getItem(DB_KEY);
